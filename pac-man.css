@@ -3,7 +3,12 @@
   padding: 0;
   box-sizing: 0;
 }
+:root {
+  --pxSize: 3px;
+  --cellSize: calc(var(--pxSize) * 8);
+  --boardSize: calc(var(--cellSize) * 28);
 
+}
 body{
   max-width: 100vw;
   height: 100vh;
@@ -12,17 +17,18 @@ body{
   place-items: center;
 }
 .screen{
-  width: 896px;
+  width: var(--boardSize);
   display: flex;
   flex-wrap: wrap;
 }
 .cell{
-  width: 32px;
-  height: 32px;
+  width: var(--cellSize);
+  height: var(--cellSize);
   display: flex;
   flex-wrap: wrap;
+  outline: 1px solid red;
 }
 .px{
-  width: 4px;
-  height: 4px;
+  width: var(--pxSize);
+  height: var(--pxSize);
 }
